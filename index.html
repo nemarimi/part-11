@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 10</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./images/favicon (2).ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div>
+        <section class="part-10">
+            <div>
+                <h3 class="special-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laudantium.
+                </h3>
+            </div>
+            <div>
+                <div class="normal">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <div class="normal transform">
+                    <p>
+                        Lorem ipsum dolor sit amet. Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Nam vel, molestiae veniam necessitatibus atque itaque rerum animi aspernatur. Tempora
+                        soluta.
+                    </p>
+                </div>
+                <div class="transition special-font">
+                    <div>Sağ</div>
+                    <div>Orta</div>
+                    <div>Sol</div>
+                </div>
+
+                <div class="box"></div>
+
+                <div class="boxes">
+                    <div class="kutucuk time1">linear</div>
+                    <div class="kutucuk time2">ease</div>
+                    <div class="kutucuk time3">ease-in</div>
+                    <div class="kutucuk time4">ease-out</div>
+                    <div class="kutucuk time5">ease-in-out</div>
+                </div>
+
+                <!-- <img src="./images/levi.png" id="picture" alt="levi ackermam" class="example-image" draggable/>
+                <p><img src="./images/trash.png" alt="sil" class="example-trash" ondragenter="return"
+                        ondragover="return" ondrag="Delete()"></p> -->
+
+                <img src="./images/levi.png" width="359" height="auto" alt="resim" id="picture" draggable />
+                <p class="example-trash"><img src="./images/trash.png" width="50" height="50" alt="sil"
+                        ondragenter="return false" ondragover="return false" ondrop="Delete();" /></p>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- javascript -->
+    <script>
+        function Delete() {
+            let pic = document.querySelector("#picture");
+            pic.parentNode.removeChild(pic);
+        }
+    </script>
+    <link rel="stylesheet" href="main.js">
+</body>
+
+</html>

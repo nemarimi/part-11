@@ -1,0 +1,156 @@
+.special-font {
+    font-family: 'Press Start 2P', system-ui;
+}
+
+.normal {
+    width: 400px;
+    background-color: plum;
+    border: 1px solid purple;
+    color: white;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.transform {
+    /* transform x ve y ekseninde kullanımdır : 10px, -20px*/
+    /* rotate donme isleminde kullanılır : 10deg */
+    /* scale boyut buyutme ve kucultme degisimlerinde kullanılır. ornek scale: 2; */
+    /* skewX ve skewY x ve y ekseninde egilme izleminde kullanılır: 20deg */
+    /* matrix scaleX skewY skewX scaleY translateX ve translateY gibi ayarları tekte kullanabilmemizi sağlar. : matrix: (1,0.3,5,200,10,0) */
+    transform: rotate(5deg);
+}
+
+.transition {
+    clear: both;
+    width: 95%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    background-color: darkblue;
+    color: plum;
+    transition: .2s ease-in-out;
+}
+
+.transition div {
+    flex: 1;
+    cursor: pointer;
+    background-color: blueviolet;
+    transition: .2s ease-in-out;
+    text-align: center;
+    padding: 20px;
+}
+
+.transition div:hover {
+    flex: 1.5;
+    background-color: plum;
+    color: blueviolet;
+}
+
+.box {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: lime;
+    color: blueviolet;
+    position: relative;
+}
+
+.box:hover {
+    -webkit-animation-duration: alternate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: Renk;
+    -webkit-animation-duration: 3s;
+    animation-duration: alternate;
+    animation-iteration-count: infinite;
+    animation-name: Renk;
+    animation-duration: 3s;
+}
+
+@keyframes Renk {
+    0% {
+        background-color: plum;
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: pink;
+        left: 200px;
+        top: 0;
+    }
+
+    50% {
+        background-color: palegoldenrod;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: paleturquoise;
+        left: 0;
+        top: 200px;
+    }
+
+    100% {
+        background-color: papayawhip;
+        left: 0;
+        top: 0;
+    }
+}
+
+.kutucuk {
+    margin: 2rem;
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+    text-align: center;
+    background-color: blueviolet;
+    position: relative;
+    
+    color: white;
+    animation: Move 5s infinite;
+}
+
+@keyframes Move {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 450px;
+    }
+}
+
+.time1 {
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.time2 {
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+.time3 {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+.time4 {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+.time5 {
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.example-image{
+    width: 400px;
+    height: auto;
+    float: left;
+}
+.example-trash{
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
